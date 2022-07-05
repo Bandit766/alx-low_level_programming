@@ -9,12 +9,10 @@ int main(void)
 {
 
 	int ch;
-	char conv;
 
 	for (ch = 0 ; ch < 10 ; ch++)
 	{
-	conv = ch + '0';
-	putchar(conv);
+	putchar(ch + '0');
 	}
 	putchar('\n');
 
