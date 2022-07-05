@@ -9,7 +9,7 @@ int main(void)
 {
 
 	int ch;
-	char albt[] = "123456789abcdef";
+	char albt[] = "0123456789abcdef";
 
 	for (ch = 0 ; ch < 16 ; ch++)
 	{
