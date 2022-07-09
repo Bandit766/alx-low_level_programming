@@ -1,0 +1,31 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * print_last_digit - last digit of int n
+ *
+ * @n : int being checked
+ * Return: last digit of int n
+ */
+
+int print_last_digit(int n)
+{
+	int r;
+	printf("r declared\n");
+	if (n < 0)
+	{
+		printf("neg number %d\n",n);
+		n = n * -1;
+		printf("neg number converted to pos %d\n",n);
+	}
+	if(n == 0)
+	{
+		printf("return 0\n");
+		_putchar(n);
+		return n;
+	}
+	r = n % 10;
+	printf("modulo done %d\n",r);
+	_putchar(r);
+	printf("putchar done\n");
+	return (r);
+}
