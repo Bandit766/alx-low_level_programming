@@ -29,6 +29,9 @@ if (j < 9)
 {
 _putchar(',');
 _putchar(' ');
+}
+if (calc < 10)
+{
 _putchar(' ');
 }
 }
