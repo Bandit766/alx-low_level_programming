@@ -25,8 +25,11 @@ else
 _putchar('0' + (calc / 10));
 _putchar('0' + (calc % 10));
 }
+if (j < 9)
+{
 _putchar(',');
 _putchar(' ');
+}
 }
 _putchar('\n');
 }
