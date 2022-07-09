@@ -14,6 +14,12 @@ int print_last_digit(int n)
 	{
 		n = n * -1;
 	}
+	if (n == (n * -1))
+	{
+		r = 8;
+		_putchar('0' + r);
+		return (r);
+	}
 	if (n == 0)
 	{
 		_putchar('0' + n);
