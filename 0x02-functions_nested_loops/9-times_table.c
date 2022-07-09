@@ -16,6 +16,15 @@ for (i = 0; i <= 9; i++)
 for (j = 0; j <= 9; j++)
 {
 calc = i * j;
+if (calc < 10 && i > 0 && j > 0)
+{
+_putchar(' ');
+}
+else if (calc == 0 && j > 0)
+{
+_putchar(' ');
+}
+
 if (calc < 10)
 {
 _putchar('0' + calc);
@@ -30,11 +39,9 @@ if (j < 9)
 _putchar(',');
 _putchar(' ');
 }
-if (calc < 10)
-{
-_putchar(' ');
 }
-}
+
+
 _putchar('\n');
 }
 }
