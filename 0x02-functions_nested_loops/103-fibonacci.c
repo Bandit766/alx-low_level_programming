@@ -9,7 +9,9 @@
 int main(void)
 {
 int temp;
-int fib1, fib2, check = 1;
+int fib1 = 1;
+int fib2 = 1;
+int check = 1;
 int sum = 0;
 
 while (check < 4000000 && check > 0)
