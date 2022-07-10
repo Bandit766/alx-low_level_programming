@@ -8,9 +8,10 @@
 
 int main(void)
 {
-	int i,temp;
-	int fib = 1;
-	int fib1 = 1;
+	int i;
+	unsigned long temp;
+	unsigned long fib = 1;
+	unsigned long fib1 = 1;
 
 	printf("1, ");
 	for (i = 0; i <= 50; i++)
@@ -21,11 +22,11 @@ int main(void)
 		
 		if (i < 50)
 		{
-			printf("%d, ", fib1);
+			printf("%lu, ", fib1);
 		}
 		else
 		{
-			printf("%d\n", fib1);
+			printf("%lu\n", fib1);
 		}
 	}
 	return (0);
