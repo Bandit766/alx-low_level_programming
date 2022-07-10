@@ -3,10 +3,11 @@
 /**
 * main - will print the sums of the numbers divisible by 3 or 5 below 1024
 *
-* Return : 0 on success
+* Return: Always 0
+*
 */
 
-int main (void)
+int main(void)
 {
 	int i;
 	int sum = 0;
@@ -18,7 +19,7 @@ int main (void)
 			sum += i;
 		}
 	}
-	
-	printf("%d\n",sum);
+
+	printf("%d\n", sum);
 	return (0);
 }
