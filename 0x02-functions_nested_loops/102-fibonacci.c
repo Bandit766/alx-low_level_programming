@@ -14,12 +14,12 @@ int main(void)
 	unsigned long fib1 = 1;
 
 	printf("1, ");
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 49; i++)
 	{
 		temp = fib + fib1;
 		fib = fib1;
 		fib1 = temp;
-		
+
 		if (i < 50)
 		{
 			printf("%lu, ", fib1);
