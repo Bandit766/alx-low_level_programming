@@ -8,19 +8,24 @@
 
 int main(void)
 {
-	int i;
+	int i,temp;
 	int fib = 1;
+	int fib1 = 1;
 
+	printf("1, ");
 	for (i = 0; i <= 50; i++)
 	{
-		fib += i;
+		temp = fib + fib1;
+		fib = fib1;
+		fib1 = temp;
+		
 		if (i < 50)
 		{
-			printf("%d, ", fib);
+			printf("%d, ", fib1);
 		}
 		else
 		{
-			printf("%d\n", fib);
+			printf("%d\n", fib1);
 		}
 	}
 	return (0);
