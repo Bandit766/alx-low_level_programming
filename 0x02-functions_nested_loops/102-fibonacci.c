@@ -20,7 +20,7 @@ int main(void)
 		fib = fib1;
 		fib1 = temp;
 
-		if (i < 50)
+		if (i < 48)
 		{
 			printf("%lu, ", fib1);
 		}
