@@ -10,19 +10,21 @@
 void puts_half(char *str)
 {
 
-	int i, l = 0, j = 0;
+	int i, k, l = 0, j = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		l++;
 	}
 
-	if (l % 2 == 1)
+	k = l;
+
+	if (k  % 2 == 1)
 	{
-		l--;
+		k--;
 	}
 
-	j = (l / 2);
+	j = (k / 2);
 
 	for (i = j; i < l; i++)
 	{
