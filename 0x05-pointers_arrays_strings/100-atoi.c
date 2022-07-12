@@ -10,25 +10,20 @@
 
 int _atoi(char *s)
 {
-	int pos = 0, neg = 0, i = 0, sum = 0;
+	int isneg = 0, i = 0, sum = 0, innum = 0;
 
 	while (s[i] != '\0')
 	{
-	/**	if (s[i] == '+')
-		{
-			pos++;
-			i++;
-			continue;
-		}*/
 		if (s[i] == '-')
 		{
-			neg++;
+			isneg++;
 			i++;
 			continue;
 		}
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
+			innum = 1;
 
 			if (sum == 0)
 			{
@@ -40,11 +35,15 @@ int _atoi(char *s)
 				sum += (s[i] - '0');
 			}
 		}
+		else if (innum > 0)
+		{
+			break;
+		}
 
 		i++;
 	}
 
-	if (neg - pos > 0)
+	if (isneg > 0)
 		sum = -sum;
 	
 	return (sum);
