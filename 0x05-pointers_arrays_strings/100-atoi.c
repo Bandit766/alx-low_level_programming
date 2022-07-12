@@ -10,10 +10,18 @@
 
 int _atoi(char *s)
 {
-	int isneg = 0, i = 0, sum = 0, innum = 0;
+	int isneg = 0, i = 0, ret = 0, innum = 0;
+
+	unsigned int sum = 0;
 
 	while (s[i] != '\0')
 	{
+		if (s[i] == '+')
+		{
+			isneg--;
+			i++;
+			continue;
+		}
 		if (s[i] == '-')
 		{
 			isneg++;
@@ -43,8 +51,10 @@ int _atoi(char *s)
 		i++;
 	}
 
-	if (isneg > 0)
-		sum = -sum;
+	ret = (int)sum;
 	
-	return (sum);
+	if (isneg > 0)
+		ret = -ret;
+	
+	return (ret);
 }
