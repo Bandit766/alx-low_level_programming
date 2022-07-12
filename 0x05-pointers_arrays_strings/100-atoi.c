@@ -10,7 +10,7 @@
 
 int _atoi(char *s)
 {
-	int isneg = 0, i = 0, ret = 0, innum = 0;
+	int isneg = 0, prevneg = 0, i = 0, innum = 0;
 
 	unsigned int sum = 0;
 
@@ -19,15 +19,10 @@ int _atoi(char *s)
 		if (s[i] == '+')
 		{
 			isneg--;
-			i++;
-			continue;
+			prevneg = 1;
 		}
 		if (s[i] == '-')
-		{
 			isneg++;
-			i++;
-			continue;
-		}
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -50,11 +45,9 @@ int _atoi(char *s)
 
 		i++;
 	}
-
-	ret = (int)sum;
-	
-	if (isneg > 0)
-		ret = -ret;
-	
-	return (ret);
+	printf("sum value %u\n", sum);
+	if (isneg >= 0 && prevneg == 1)
+		return (-sum);
+	else
+		return ((int)sum);
 }
