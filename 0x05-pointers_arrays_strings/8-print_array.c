@@ -14,11 +14,7 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	if (n < 1)
-	{
-		fprintf(stderr, "Invalid array or array length\n");
-	}
-	else
+	if (n > 0)
 	{
 
 		for (i = 0; i < n; i++)
