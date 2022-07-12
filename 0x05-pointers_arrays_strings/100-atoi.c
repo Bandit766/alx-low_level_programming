@@ -10,7 +10,7 @@
 
 int _atoi(char *s)
 {
-	int isneg = 0, prevneg = 0, i = 0, innum = 0;
+	int isneg = 0, i = 0, innum = 0;
 
 	unsigned int sum = 0;
 
@@ -19,10 +19,7 @@ int _atoi(char *s)
 		if (s[i] == '+')
 			isneg--;
 		if (s[i] == '-')
-		{
 			isneg++;
-			prevneg = 1;
-		}
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -45,7 +42,7 @@ int _atoi(char *s)
 
 		i++;
 	}
-	if (isneg >= 0 && prevneg == 1)
+	if (isneg > 0)
 		return (-sum);
 	else
 		return ((int)sum);
