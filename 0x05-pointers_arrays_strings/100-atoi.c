@@ -14,12 +14,12 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == '+')
+	/**	if (s[i] == '+')
 		{
 			pos++;
 			i++;
 			continue;
-		}
+		}*/
 		if (s[i] == '-')
 		{
 			neg++;
@@ -45,7 +45,7 @@ int _atoi(char *s)
 	}
 
 	if (neg - pos > 0)
-		sum = sum * -1;
+		sum = -sum;
 	
 	return (sum);
 }
