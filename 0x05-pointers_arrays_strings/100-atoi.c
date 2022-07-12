@@ -45,7 +45,6 @@ int _atoi(char *s)
 
 		i++;
 	}
-	printf("sum value %u\n", sum);
 	if (isneg >= 0 && prevneg == 1)
 		return (-sum);
 	else
