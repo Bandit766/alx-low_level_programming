@@ -14,14 +14,17 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
+		printf("Working with %c ",s[i]);
 		if (s[i] == '+')
 		{
+			printf("which is a pos sign\n");
 			pos++;
 			i++;
 			continue;
 		}
 		if (s[i] == '-')
 		{
+			printf("which is a neg sign\n");
 			neg++;
 			i++;
 			continue;
@@ -29,23 +32,29 @@ int _atoi(char *s)
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-
+			printf("which is a number ");
 			if (sum == 0)
 			{
 				sum += (s[i] - '0');
+				printf("which brings the initially zero sum to %d", sum);
 			}
 			else
 			{
+				printf("which when added to %d brings the total to ", sum);
 				sum = sum * 10;
 				sum += (s[i] - '0');
+				printf("%d\n", sum);
 			}
 		}
 
 		i++;
+		printf("\n");
 	}
 
 	if (neg - pos > 0)
 		sum = sum * -1;
 	
+	printf("\n\n\nfinal number is : %d\n\n\n", sum);
+
 	return (sum);
 }
