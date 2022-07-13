@@ -6,7 +6,7 @@
 */
 void print_number(int n)
 {
-	int i, j, digits = 0, copy, current, sum = 0;
+	unsigned int i, j, digits = 0, copy, current, sum = 0;
 
 	if (n == 0)
 		_putchar('0');
@@ -27,7 +27,7 @@ void print_number(int n)
 		}
 		copy = n;
 		i = digits - 1;
-		while (sum != n)
+		while (sum != (unsigned int)(n))
 		{
 			current = n;
 			sum = sum * 10;
