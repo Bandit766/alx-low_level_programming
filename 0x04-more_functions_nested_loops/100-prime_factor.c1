@@ -1,22 +1,16 @@
 #include <stdio.h>
+#include <math.h>
 /**
 * main - finds the largest prime number
 * Return: 0 on success
 */
 int main(void)
 {
-	long rootl, n = 612852475143, n1 = n / 3, i, ret = 3;
-	float root = n / 2, temp = 0;
+	long n = 612852475143, n1 = n / 3, i, ret = 3;
+	long root = (long)sqrtl((long double)n);
 	int test;
 
-	while (root != temp)
-	{
-		temp = root;
-		root = (n / temp + temp) / 2;
-	}
-	rootl = (long)root;
-
-	for (i = 5; i < rootl; i += 2)
+	for (i = 5; i < root; i += 2)
 	{
 		if (n1 % i == 0)
 		{
