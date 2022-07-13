@@ -1,0 +1,59 @@
+#include "main.h"
+/**
+* print_number - prints out the input number
+* @n: the input integer
+**/
+void print_number(int n)
+{
+	int i, j, digits = 0, copy, copy2, current, currentp, sum;
+
+	if (n == 0)
+		_putchar('0');
+	else
+	{
+		copy = n;
+		copy2 = copy;
+		if(n < 0)
+		{
+			_putchar('-');
+			copy = -n;
+			copy2 = copy;
+		}
+		if (copy % 10 == 0)
+			digits++;
+		
+		while (copy > 0)
+		{
+			digits++;
+			copy = copy / 10;
+		}
+		copy = copy2;
+		sum = 0;
+		i = digits - 1;
+		while (1)
+		{
+			copy = copy2;
+			current = copy;
+			for (j = i; j > 0; j--)
+			{
+				current = current /10;
+			}
+			sum = sum * 10;
+			if (sum == copy2)
+			{
+				currentp = current % 10;
+				_putchar('0'+currentp);
+				break;
+			}
+			else
+			{
+				currentp = current - sum;
+				_putchar('0'+currentp);
+				sum += currentp;
+				if (sum == copy2)
+					break;
+			}
+			i--;
+		}
+	}
+}
