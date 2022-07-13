@@ -7,8 +7,8 @@
 char *rot13(char *str)
 {
 	int i, j;
-	char var[27] = "abcdefghijklmnopqrstuvwxyz";
-	char conv[27] = "nopqrstuvwxyzabcdefghijklm";
+	char var[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char conv[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -17,11 +17,6 @@ char *rot13(char *str)
 			if (str[i] == var[j])
 			{
 				str[i] = conv[j];
-				break;
-			}
-			if (str[i] == var[j] - 32)
-			{
-				str[i] = conv[j] - 32;
 				break;
 			}
 		}
