@@ -17,6 +17,6 @@ int main(void)
 			ret = i;
 		}
 	}
-	printf("%ld\n", ret);
+	printf("%ld\n", (int)ret);
 	return (0);
 }
