@@ -13,6 +13,14 @@ char *cap_string(char *str)
 
 		for (i = 0; str[i] != '\0'; i++)
 		{
+			if (i == 0)
+			{
+				for (k = 'a'; k <= 'z'; k++)
+				{
+					if (str[i] == k)
+						str[i] -= 32;
+				}
+			}
 			for (j = 0; vals[j] != '\0'; j++)
 			{
 				if (str[i] == vals[j])
@@ -27,7 +35,6 @@ char *cap_string(char *str)
 					}
 				}
 				}
-
 				if (increment)
 				{
 					increment = 0;
@@ -36,6 +43,5 @@ char *cap_string(char *str)
 				}
 			}
 		}
-
 		return (str);
 	}
