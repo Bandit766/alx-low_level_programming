@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* leet - runs a basic cipher
+* rot13 - runs a basic cipher on input text
 * @str: input string to be converted
 * Return: the converted string
 */
