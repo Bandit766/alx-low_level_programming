@@ -12,10 +12,11 @@ int _strcmp(char *s1, char *s2)
 
 	while (1)
 	{
-		if (s1[i] != '\0' && s2[i] != '\0')
+		if (s1[i] == '\0' ||  s2[i] == '\0')
 			break;
 		if ((unsigned char)(s1[i]) != (unsigned char)(s2[i]))
 			break;
+		i++;
 	}
 
 	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
