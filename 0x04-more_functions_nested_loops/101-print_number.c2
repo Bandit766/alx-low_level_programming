@@ -6,18 +6,19 @@
 */
 void print_number(int n)
 {
-	unsigned int i, j, digits = 0, copy, current, sum = 0;
+	int i, j, digits = 0, copy, current, sum = 0;
 
 	if (n == 0)
 		_putchar('0');
 	else
 	{
+		copy = n;
 		if (n < 0)
 		{
 			_putchar('-');
+			copy = -n;
 			n = -n;
 		}
-		copy = n;
 		if (copy % 10 == 0)
 			digits++;
 		while (copy > 0)
@@ -36,7 +37,7 @@ void print_number(int n)
 				current = current / 10;
 			}
 			sum = sum * 10;
-			if (sum == (unsigned int)n)
+			if (sum == n)
 			{
 				_putchar('0' + (current % 10));
 				break;
@@ -45,7 +46,7 @@ void print_number(int n)
 			{
 				_putchar('0' + (current - sum));
 				sum += (current - sum);
-				if (sum == (unsigned int)n)
+				if (sum == n)
 					break;
 			}
 			i--;
