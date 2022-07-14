@@ -27,27 +27,16 @@ void print_number(int n)
 		}
 		copy = n;
 		i = digits - 1;
-		while (1)
+		while (sum != (unsigned int)(n))
 		{
-			copy = n;
-			current = copy;
+			current = n;
+			sum = sum * 10;
 			for (j = i; j > 0; j--)
 			{
 				current = current / 10;
 			}
-			sum = sum * 10;
-			if (sum == (unsigned int)n)
-			{
-				_putchar('0' + (current % 10));
-				break;
-			}
-			else
-			{
-				_putchar('0' + (current - sum));
-				sum += (current - sum);
-				if (sum == (unsigned int)n)
-					break;
-			}
+			_putchar('0' + (current - sum));
+			sum += (current - sum);
 			i--;
 		}
 	}
